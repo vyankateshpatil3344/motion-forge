@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Play, Sparkles } from 'lucide-react';
 import gsap from 'gsap';
+import logo from '../logo.png';
 
 const Hero = ({ onBookDemo }) => {
   const containerRef = useRef(null);
@@ -165,11 +166,12 @@ const Hero = ({ onBookDemo }) => {
               {/* Glowing core behind logo */}
               <div className="absolute w-24 h-24 rounded-full bg-brand-orange/40 blur-[30px] animate-pulse pointer-events-none" />
 
-              {/* Logo Typography - Big and Impactful */}
-              <div className="relative text-8xl font-heading font-black tracking-tighter text-white flex flex-col items-center">
-                <span className="text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">M</span>
-                <span className="text-brand-orange -mt-8 translate-x-4 drop-shadow-[0_4px_16px_rgba(255,107,0,0.6)]">F</span>
-              </div>
+              {/* Logo PNG Image */}
+              <img 
+                src={logo} 
+                alt="Motion Forge Logo" 
+                className="relative w-44 h-44 object-contain drop-shadow-[0_10px_25px_rgba(255,107,0,0.35)] select-none z-10" 
+              />
             </div>
 
             {/* Floating Particles (Framer Motion managed) */}
