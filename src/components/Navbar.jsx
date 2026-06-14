@@ -46,14 +46,20 @@ const Navbar = ({ onBookDemo }) => {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'glass-nav py-4 shadow-lg shadow-black/20' 
-            : 'bg-transparent py-6'
+            ? 'glass-nav py-3 shadow-lg shadow-black/20' 
+            : 'bg-transparent py-8'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group z-50">
-            <img src={logo} alt="Motion Forge" className="h-14 md:h-16 w-auto object-contain" />
+          <a href="#home" className="flex items-center group z-50 py-1">
+            <img 
+              src={logo} 
+              alt="Motion Forge" 
+              className={`w-auto object-contain transition-all duration-300 ${
+                isScrolled ? 'h-14 md:h-16' : 'h-20 md:h-24'
+              }`} 
+            />
           </a>
 
           {/* Desktop Nav Links */}
